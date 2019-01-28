@@ -1,4 +1,4 @@
-FastLED + ESP8266 Web Server
+FastLED + ESP8266 Web Server + Wordclock
 =========
 
 Control an addressable LED strip with an ESP8266 via a web browser or infrared remote control.
@@ -11,6 +11,8 @@ Hardware
 [![Wemos D1 Mini Pro & Headers](https://ae01.alicdn.com/kf/HTB1P1KVaMsSMeJjSsphq6xuJFXah/WEMOS-D1-mini-Pro-V1-1-0-16M-bytes-external-antenna-connector-ESP8266-WIFI-Internet-of.jpg_200x200.jpg)](https://www.aliexpress.com/item/WEMOS-D1-mini-Pro-16M-bytes-external-antenna-connector-ESP8266-WIFI-Internet-of-Things-development-board/32724692514.html)
 
 [Wemos D1 Mini Pro & Headers](https://www.aliexpress.com/item/WEMOS-D1-mini-Pro-16M-bytes-external-antenna-connector-ESP8266-WIFI-Internet-of-Things-development-board/32724692514.html)
+
+
 
 or
 
