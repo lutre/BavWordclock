@@ -5,6 +5,7 @@ var urlBase = "";
 // used when hosting the site somewhere other than the ESP8266 (handy for testing without waiting forever to upload to SPIFFS)
 // var address = "esp8266-1920f7.local";
 // var urlBase = "http://" + address + "/";
+//HEY
 
 var postColorTimer = {};
 var postValueTimer = {};
@@ -34,15 +35,13 @@ $(document).ready(function() {
           addNumberField(field);
         } else if (field.type == "Boolean") {
           addBooleanField(field);
-        }else if (field.type == "Select") {
+        } else if (field.type == "Select") {
           addSelectField(field);
         } else if (field.type == "Color") {
           addColorFieldPalette(field);
           addColorFieldPicker(field);
         } else if (field.type == "Section") {
           addSectionField(field);
-        } else if (field.type == "SnakeDirection") {
-          addSnakeDirectionField(field);
         }
       });
 
@@ -107,40 +106,6 @@ function addNumberField(field) {
     delayPostValue(field.name, value);
   });
 
-  $("#form").append(template);
-}
-
-
-function addSnakeDirectionField(field){
-
-  var template = $("#snakeDirectionTemplate").clone();
-
-  template.attr("id", "form-group-" + field.name);
-  template.attr("data-field-type", field.type);
-
-  var label = template.find(".control-label");
-  label.attr("for", "btn-group-" + field.name);
-  label.text(field.label);
-
-  var btnUp = template.find("#btnUp");
-  var btnLeft = template.find("#btnLeft");
-  var btnRight = template.find("#btnRight");
-  var btnDown = template.find("#btnDown");
-
-
-  btnLeft.click(function() {
-    postValue(field.name, 1)
-  });
-  btnUp.click(function() {
-    postValue(field.name, 2)
-  });
-  btnRight.click(function() {
-    postValue(field.name, 3)
-  });
-  btnDown.click(function() {
-    postValue(field.name, 4)
-  });
-  
   $("#form").append(template);
 }
 

@@ -17,8 +17,10 @@
 */
 
 uint8_t power = 1;
+uint8_t snakeDir = 0;
 uint8_t brightness = brightnessMap[brightnessIndex];
 
+uint8_t snakeDirection = 0;
 //String setPower(String value) {
 //  power = value.toInt();
 //  if(power < 0) power = 0;
@@ -30,12 +32,9 @@ String getPower() {
   return String(power);
 }
 
-//String setBrightness(String value) {
-//  brightness = value.toInt();
-//  if(brightness < 0) brightness = 0;
-//  else if (brightness > 255) brightness = 255;
-//  return String(brightness);
-//}
+String getSnakeDirection(){
+  return String(snakeDirection);
+}
 
 String getBrightness() {
   return String(brightness);
@@ -107,6 +106,7 @@ String getTwinkleDensity() {
 
 FieldList fields = {
   { "power", "Power", BooleanFieldType, 0, 1, getPower },
+  { "snakeDirection", "Snake Direction", SnakeDirectionFieldType, 0, 255, getSnakeDirection },
   { "brightness", "Brightness", NumberFieldType, 1, 255, getBrightness },
   { "pattern", "Pattern", SelectFieldType, 0, patternCount, getPattern, getPatterns },
   { "palette", "Palette", SelectFieldType, 0, paletteCount, getPalette, getPalettes },
@@ -125,3 +125,4 @@ FieldList fields = {
 };
 
 uint8_t fieldCount = ARRAY_SIZE(fields);
+

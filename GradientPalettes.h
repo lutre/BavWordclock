@@ -516,3 +516,4 @@ const TProgmemRGBGradientPalettePtr gGradientPalettes[] = {
 const uint8_t gGradientPaletteCount =
   sizeof( gGradientPalettes) / sizeof( TProgmemRGBGradientPalettePtr );
 
+

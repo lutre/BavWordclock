@@ -25,13 +25,15 @@
   <nav class="navbar navbar-default navbar-static-top" id="top" role="banner">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1"
+          aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="https://www.evilgeniuslabs.org" target="_blank"><img src="/images/atom196.png" style="width: 24px; height: 24px;" /></a>
+        <a class="navbar-brand" href="https://www.evilgeniuslabs.org" target="_blank"><img src="/images/atom196.png"
+            style="width: 24px; height: 24px;" /></a>
         <a class="navbar-brand" href="https://www.evilgeniuslabs.org" target="_blank">Evil Genius Labs</a>
       </div>
       <div class="collapse navbar-collapse" id="navbar-collapse-1">
@@ -95,12 +97,10 @@
       </div>
       <div class="col-sm-2">
         <div class="btn-group" role="group" aria-label="...">
-          <button type="button" class="btn btn-default btn-previous"
-                  aria-label="Previous" title="Previous">
+          <button type="button" class="btn btn-default btn-previous" aria-label="Previous" title="Previous">
             <span class="glyphicon glyphicon-chevron-left"></span>
           </button>
-          <button type="button" class="btn btn-default btn-next"
-                  aria-label="Next" title="Next">
+          <button type="button" class="btn btn-default btn-next" aria-label="Next" title="Next">
             <span class="glyphicon glyphicon-chevron-right"></span>
           </button>
         </div>
@@ -190,12 +190,92 @@
       </div>
     </div>
 
+
+
+
+
+    <div id="snakeDirectionTemplate" class="form-group">
+      <label class="col-sm-2 control-label"></label>
+      <div class="col-sm-10">
+        <div class="grid-container" style="display: grid;grid-template-columns: fit-content(100%) fit-content(100%) fit-content(100%);">
+          <div class="grid-item"></div>
+          <div class="grid-item">
+            <button type="button" class="btn btn-default" style="
+            border-radius: 4px;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;"
+              id="btnUp">
+              <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                <path fill="#000000" d="M13,18H11V10L7.5,13.5L6.08,12.08L12,6.16L17.92,12.08L16.5,13.5L13,10V18M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="grid-item"></div>
+          <div class="grid-item">
+            <button type="button" class="btn btn-default" id="btnLeft" style="
+            border-top-left-radius: 4px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 4px;			">
+              <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                <path fill="#000000" d="M18,11V13H10L13.5,16.5L12.08,17.92L6.16,12L12.08,6.08L13.5,7.5L10,11H18M2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12M4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12Z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="grid-item"></div>
+          <div class="grid-item">
+            <button type="button" class="btn btn-default" id="btnRight" style="
+            border-radius: 4px;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            border-bottom-left-radius: 0px;			">
+              <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                <path fill="#000000" d="M6,13V11H14L10.5,7.5L11.92,6.08L17.84,12L11.92,17.92L10.5,16.5L14,13H6M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12Z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="grid-item"> </div>
+          <div class="grid-item">
+            <button type="button" class="btn btn-default" id="btnDown" style="
+                border-radius: 4px;
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 4px;
+                border-bottom-left-radius: 4px;        ">
+              <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                <path fill="#000000" d="M11,6H13V14L16.5,10.5L17.92,11.92L12,17.84L6.08,11.92L7.5,10.5L11,14V6M12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20Z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="grid-item"> </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </div>
 
   <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2" aria-expanded="false">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2"
+          aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -209,7 +289,9 @@
               <span class="glyphicon glyphicon-refresh" id="btnRefresh"></span>
             </a>
           </li>
-          <li><p class="navbar-text" id="status">Loading, please wait...</p></li>
+          <li>
+            <p class="navbar-text" id="status">Loading, please wait...</p>
+          </li>
         </ul>
       </div>
     </div>

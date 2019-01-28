@@ -482,3 +482,4 @@ InputCommand readCommand() {
 InputCommand readCommand(unsigned int holdDelay) {
   return getCommand(readIRCode(holdDelay));
 }
+
