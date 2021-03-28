@@ -25,9 +25,10 @@ const String SelectFieldType = "Select";
 const String ColorFieldType = "Color";
 const String SectionFieldType = "Section";
 const String SnakeDirectionFieldType = "SnakeDirection";
+const String TimeFieldType = "Time";
 
 
-typedef struct Field
+struct Field
 {
   String name;
   String label;

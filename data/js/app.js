@@ -43,6 +43,12 @@ $(document).ready(function() {
           addSectionField(field);
         } else if (field.type == "SnakeDirection") {
           addSnakeDirectionField(field);
+        } else if (field.type == "Time") {
+          console.log("time field")
+          addTimeField(field);
+        }
+        else{
+          ;
         }
       });
 
@@ -110,6 +116,29 @@ function addNumberField(field) {
   $("#form").append(template);
 }
 
+function addTimeField(field){
+
+  var template = $("#timeTemplate").clone();
+
+  template.attr("id", "form-group-" + field.name);
+  template.attr("data-field-type", field.type);
+
+  var label = template.find(".control-label");
+  label.attr("for", "btn-group-" + field.name);
+  label.text(field.label);
+
+  var btnSave = template.find("#btnSave");
+  var thisTime = template.find("#thisTime");
+
+  btnSave.click(function() {
+    console.log("btnSave");
+    var now = new Date();
+    console.log(now);
+    postValue(field.name, now.getHours() + ":" + now.getMinutes());
+  });
+  
+  $("#form").append(template);
+}
 
 function addSnakeDirectionField(field){
 
@@ -457,6 +486,16 @@ function delayPostValue(name, value) {
   postValueTimer = setTimeout(function() {
     postValue(name, value);
   }, 300);
+}
+
+function postTime(name, value) {
+  $("#status").html("Setting " + name + ": " + value.h + ":" + value.m , "please wait...");
+  var body = { name: name, h: value.h, m: value.m };
+
+  $.post(urlBase + name + "?h=" + value.h + "&m=" + value.m , body, function(data) {
+    $("#status").html("Set " + name + ": " + data);
+  })
+  .fail(function(textStatus, errorThrown) { $("#status").html("Fail: " + textStatus + " " + errorThrown); });
 }
 
 function postColor(name, value) {

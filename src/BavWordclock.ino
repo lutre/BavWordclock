@@ -12,7 +12,7 @@
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
    GNU General Public License for more details.
 
-   You should have received a copy of the GNU General Public License
+   You should have< received a copy of the GNU General Public License
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
@@ -37,6 +37,7 @@ extern "C"
 #include <EEPROM.h>
 //#include <IRremoteESP8266.h>
 #include "GradientPalettes.h"
+#include <WiFiUdp.h>
 
 #include <elapsedMillis.h>
 #include "Patterns.h"
@@ -45,6 +46,8 @@ extern "C"
 #include <Wire.h>
 #include <Bounce2.h>
 #include <ESP8266WiFi.h>
+
+#include <NTPClient.h>
 
 #include <LinkedList.h>
 #include <AceButton.h>
@@ -75,7 +78,7 @@ uint8_t blinkCounter = 4;
 
 #include "FSBrowser.h"
 
-#define DATA_PIN D5
+#define DATA_PIN D6
 #define LED_TYPE WS2812
 #define COLOR_ORDER GRB
 
@@ -130,6 +133,8 @@ CRGBPalette16 IceColors_p = CRGBPalette16(CRGB::Black, CRGB::Blue, CRGB::Aqua, C
 
 uint8_t currentPatternIndex = 0; // Index number of which pattern is current
 uint8_t autoplay = 0;
+
+DateTime thisTime;
 
 uint8_t autoplayDuration = 10;
 unsigned long autoPlayTimeout = 0;
@@ -440,6 +445,17 @@ void setup()
     speed = value.toInt();
     broadcastInt("speed", speed);
     sendInt(speed);
+  });
+
+  webServer.on("/time", HTTP_POST, []() {
+    String value = webServer.arg("value");
+    uint8_t h = value.substring(0,value.indexOf(":")).toInt();
+    uint8_t m = value.substring(value.indexOf(":") + 1, value.length()).toInt();
+    Serial.println("h = " + h);
+    Serial.println("m = " + m);
+    value.indexOf(":");
+    RTC.adjust(DateTime(2020,01,01,h,m,00));
+    sendString(String(thisTime.hour()) + ":" + thisTime.minute());
   });
 
   webServer.on("/twinkleSpeed", HTTP_POST, []() {
@@ -1707,15 +1723,11 @@ void setSeconds()
 {
 
   /*fill_solid(leds, NUM_LEDS, CRGB::Black);
-
   uint8_t *p_pattern = (uint8_t *)pgm_read_dword(&(seconds_table[now.second()]));
-
   //Zeit anzeigen
   for (uint16_t i = 0;; i++)
   {
-
     leds[pgm_read_byte(&(p_pattern[i]))] = solidColor;
-
     if (pgm_read_byte(&(p_pattern[i])) == 0xFF)
     {
       break;
@@ -1764,4 +1776,3 @@ void PrintTime(DateTime timeNow)
   Serial.print(timeNow.second(), DEC);
   Serial.println();
 }
-

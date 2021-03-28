@@ -40,24 +40,22 @@ void Snake::setRandomFood()
 
 void Snake::SetActiveDivection(eDirection directionIn)
 {
-    //if(activeDirection=eDirection.left)
-    if(((directionIn == eDirection.left && activeDirection == eDirection.right) ||
-       (directionIn == eDirection.right && activeDirection == eDirection.left) ||
-       (directionIn == eDirection.up && activeDirection == eDirection.down) ||
-       (directionIn == eDirection.down && activeDirection == eDirection.up)) &&
-       snakeLength > 1) {
+
+    if(((directionIn == Left && activeDirection == Right) ||
+        (directionIn == Right && activeDirection == Left) ||
+        (directionIn == Up && activeDirection == Down) ||
+        (directionIn == Down && activeDirection == Up)) &&
+        snakeLength > 1) {
            return;
        }
        else{
-
-    activeDirection = directionIn;
+         activeDirection = directionIn;
        }
 }
 
 //updates the body of the snake
 void Snake::recalculateBody()
 {
-
     XY tempHead = snakeBody.get(0);
 
     //set new head position
@@ -116,4 +114,3 @@ void Snake::MoveSnake()
         setRandomFood();
     }
 }
-

@@ -1,0 +1,64 @@
+-IC:\Users\Luis Treml\Documents\GitHub\BavWordclock\include
+-IC:\Users\Luis Treml\Documents\GitHub\BavWordclock\src
+-IC:\Users\Luis Treml\.platformio\lib\Bounce2_ID1106\src
+-IC:\Users\Luis Treml\.platformio\lib\FastLED_ID126
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\SoftwareSerial\src
+-IC:\Users\Luis Treml\.platformio\lib\AceButton_ID2858\src
+-IC:\Users\Luis Treml\.platformio\lib\LinkedList_ID443
+-IC:\Users\Luis Treml\.platformio\lib\RTClib_ID83
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\EEPROM
+-IC:\Users\Luis Treml\.platformio\lib\elapsedMillis_ID1002
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\ESP8266HTTPUpdateServer\src
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\ESP8266WebServer\src
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\ESP8266WiFi\src
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\Wire
+-IC:\Users\Luis Treml\Documents\GitHub\BavWordclock\.pio\build\d1_mini\core
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\tools\sdk\include
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\tools\sdk\libc\xtensa-lx106-elf\include
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\cores\esp8266
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\tools\sdk\lwip2\include
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\variants\d1_mini
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\ArduinoOTA
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\DNSServer\src
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\ESP8266AVRISP\src
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\ESP8266HTTPClient\src
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\ESP8266LLMNR
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\ESP8266NetBIOS
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\ESP8266SSDP
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\ESP8266SdFat\src
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\ESP8266WiFiMesh\src
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\ESP8266httpUpdate\src
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\ESP8266mDNS\src
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\Ethernet\src
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\GDBStub\src
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\Hash\src
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\SD\src
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\SDFS\src
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\SPI
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\SPISlave\src
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\Servo\src
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\TFT_Touch_Shield_V2
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\Ticker
+-IC:\Users\Luis Treml\.platformio\packages\framework-arduinoespressif8266@src-31d658a59f41540201fc3726a1394910\libraries\esp8266\src
+-IC:\Users\Luis Treml\.platformio\packages\toolchain-xtensa\xtensa-lx106-elf\include
+-IC:\Users\Luis Treml\.platformio\packages\toolchain-xtensa\xtensa-lx106-elf\include\c++\4.8.2
+-IC:\Users\Luis Treml\.platformio\packages\toolchain-xtensa\xtensa-lx106-elf\include\c++\4.8.2\xtensa-lx106-elf
+-IC:\Users\Luis Treml\.platformio\packages\toolchain-xtensa\lib\gcc\xtensa-lx106-elf\4.8.2\include
+-IC:\Users\Luis Treml\.platformio\packages\toolchain-xtensa\lib\gcc\xtensa-lx106-elf\4.8.2\include-fixed
+-IC:\Users\Luis Treml\.platformio\packages\tool-unity
+-DPLATFORMIO=40000
+-DESP8266
+-DARDUINO_ARCH_ESP8266
+-DARDUINO_ESP8266_WEMOS_D1MINI
+-DF_CPU=80000000L
+-D__ets__
+-DICACHE_FLASH
+-DARDUINO=10805
+-DARDUINO_BOARD="PLATFORMIO_D1_MINI"
+-DFLASHMODE_DIO
+-DLWIP_OPEN_SRC
+-DNONOSDK221=1
+-DTCP_MSS=536
+-DLWIP_FEATURES=1
+-DLWIP_IPV6=0
+-DVTABLES_IN_FLASH

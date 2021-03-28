@@ -1,6 +1,5 @@
 {
-    "sketch": "Wortuhr_v7.ino",
-    "board": "esp8266:esp8266:d1_mini",
+    "board": "esp8266:esp8266:d1",
     "configuration": "CpuFrequency=80,UploadSpeed=921600,FlashSize=4M3M",
-    "port": "COM7"
+    "port": "COM5"
 }
