@@ -40,7 +40,18 @@ void Snake::setRandomFood()
 
 void Snake::SetActiveDivection(eDirection directionIn)
 {
+    //if(activeDirection=eDirection.left)
+    if(((directionIn == eDirection.left && activeDirection == eDirection.right) ||
+       (directionIn == eDirection.right && activeDirection == eDirection.left) ||
+       (directionIn == eDirection.up && activeDirection == eDirection.down) ||
+       (directionIn == eDirection.down && activeDirection == eDirection.up)) &&
+       snakeLength > 1) {
+           return;
+       }
+       else{
+
     activeDirection = directionIn;
+       }
 }
 
 //updates the body of the snake
